@@ -9,18 +9,27 @@ class Utilisateur:
         self.email = email
         self.mot_de_passe = mot_de_passe
         self.date_inscription = date.today()
-
-    # Méthode pour s'inscrire
+            
+        
     def sinscrire(self):
-        print(f"Utilisateur {self.nom} {self.prenom} inscrit avec succès le {self.date_inscription}")
+        # Méthode pour s'inscrire
+        for u in utilisateurs:
+            if u.email == self.email:
+                print("Email déjà utilisé ")
+                return
+
+        # Ajouter utilisateur
+        utilisateurs.append(self)
+
+        print(f"{self.nom} inscrit avec succès ")
 
     # Méthode pour se connecter
     def seConnecter(self, email, mot_de_passe):
         if self.email == email and self.mot_de_passe == mot_de_passe:
-            print("Connexion réussie ✅")
+            print("Connexion réussie ")
             return True
         else:
-            print("Email ou mot de passe incorrect ❌")
+            print("Email ou mot de passe incorrect ")
             return False
 
     # Méthode pour modifier le profil
@@ -34,4 +43,4 @@ class Utilisateur:
         if mot_de_passe:
             self.mot_de_passe = mot_de_passe
 
-        print("Profil mis à jour avec succès ✏️")
+        print("Profil mis à jour avec succès ")
