@@ -1,0 +1,9 @@
+# Ignore inside the code folder
+partie_code/venv/
+partie_code/__pycache__/
+partie_code/*.pyc
+partie_code/db.sqlite3
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
