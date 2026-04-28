@@ -1,0 +1,13 @@
+# Sensitive Information
+.env
+db.sqlite3
+
+# Python Environment & Bytecode
+__pycache__/
+*.pyc
+venv/
+env/
+
+# System and Editor files
+.vscode/
+.DS_Store
